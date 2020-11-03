@@ -42,8 +42,13 @@ class CalendarsController < ApplicationController
         wday_num = wday_num - 7
       end
 
+<<<<<<< HEAD
+      days = { month: (@todays_date + x).month, date: (@todays_date+x).day, plans: today_plans, wdays: wdays[wday_num]}
+=======
+      days = { :month => (@todays_date + x).month, :date => (@todays_date+x).day, :plans => today_plans, :wdays => wdays[wday_num]}
+>>>>>>> parent of 8b06ad7... Issue6のハッシュロケットを消した改善
 
-      days = { month: (@todays_date + x).month, date: (@todays_date+x).day, plans: today_plans, wday: wdays[wday_num]}
+      days = { month: (@todays_date + x).month, date: (@todays_date+x).day, plans: today_plans}
 
       @week_days.push(days)
     end
